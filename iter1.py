@@ -62,8 +62,7 @@ def date_difference_interest_calculation(amount,entered_date):
         total_interest += interest_per_month * 12
         amount_with_interest = amount_with_interest + (interest_per_month * 12)
         interest_per_month = amount_with_interest*0.02
-        print(interest_per_month,total_interest)
-
+    total_interest += ((amount_with_interest * 0.02) * month_diff_)
     total_amount_with_interest = amount_with_interest + ((amount_with_interest * 0.02) * month_diff_)
     col1,col2,col3 = st.columns([1,3,1])
     col2.subheader(f':red[{diff}]')
